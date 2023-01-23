@@ -1,11 +1,12 @@
 import './App.css';
 
-import React, { useState } from 'react';
-
+import { useAppDispatch, useAppSelector } from './hooks/redux-hooks';
 import logo from './logo.svg';
+import { increment } from './store/counter/counterSlice';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const count = useAppSelector((state) => state.counter.value);
+  const dispatch = useAppDispatch();
 
   return (
     <div className="App">
@@ -17,9 +18,7 @@ function App() {
         </p>
 
         <div className="body">
-          <button onClick={() => setCount((count) => count + 1)}>
-            🪂 Click me : {count}
-          </button>
+          <button onClick={() => dispatch(increment())}>🪂 Click me : {count}</button>
 
           <p> Don&apos;t forgot to install Eslint and Prettier in Your Vscode.</p>
 
