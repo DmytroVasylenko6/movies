@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/DmytroVasylenko6/movies.git"
   },
-   "bugs": {
+  "bugs": {
     "url": "https://github.com/DmytroVasylenko6/movies/issues"
   },
   "scripts": {
